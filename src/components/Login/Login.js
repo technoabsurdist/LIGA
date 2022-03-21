@@ -7,8 +7,8 @@ import { auth } from "../../firebase";
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [profilePic, setProfilePic] = useState("");
+  // const [name, setName] = useState("");
+  // const [profilePic, setProfilePic] = useState("");
   const dispatch = useDispatch();
 
   const loginToApp = (e) => {
@@ -39,7 +39,7 @@ export default function Login() {
         userAuth.user
           .updateProfile({
             // displayName: name,
-            photoURL: profilePic,
+            // photoURL: profilePic,
           })
           .then(() => {
             dispatch(
@@ -47,7 +47,7 @@ export default function Login() {
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
                 // displayName: name,
-                photoUrl: profilePic,
+                // photoUrl: profilePic,
               })
             );
           });

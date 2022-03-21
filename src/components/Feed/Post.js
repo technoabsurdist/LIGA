@@ -1,11 +1,11 @@
 import React from 'react'
 import "./Post.css"
-import { Avatar } from "@material-ui/core"
+// import { Avatar } from "@material-ui/core"
 import InputOption from "./InputOption"
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ChatOutlinedIcon from '@material-ui/icons/ChatOutlined';
-import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
-import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
+// import ShareOutlinedIcon from '@material-ui/icons/ShareOutlined';
+// import SendOutlinedIcon from '@material-ui/icons/SendOutlined';
 
 function Post({ name, description, message, photoUrl }) {
   return (
