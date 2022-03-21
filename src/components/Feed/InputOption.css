@@ -2,13 +2,13 @@
     display: flex;
     align-items: center;
     margin-top: 15px;
-    color: gray;
+    color: rgb(87, 87, 87);
     padding: 10px;
     cursor: pointer;
 }
   
 .inputOption:hover {
-    background-color: white;
+    background-color: rgb(208, 208, 208);
     border-radius: 10px;
 }
   

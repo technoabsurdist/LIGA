@@ -2,23 +2,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 20px;
-  color: #666666;
+  margin-right: 50px;
+  color: #4d4d4d;
   cursor: pointer;
 }
 
 .headerOption__title {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: 500;
 }
 .headerOption__icon {
   object-fit: contain;
-  height: 25px !important;
-  width: 25px !important;
+  height: 30px !important;
+  width: 60px !important;
 }
 
 .headerOption:hover {
-  color: #191919;
+  color: gray;
 }
 
 @media screen and (max-width: 750px) {

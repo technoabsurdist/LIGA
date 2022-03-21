@@ -1,38 +1,38 @@
 .post {
-    background-color: white;
+    background-color: whitesmoke;
     padding: 10px;
     margin-top: 30px;
     margin-bottom: 10px;
     border-radius: 10px;
     -webkit-box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 3px 11px 1px rgba(21, 21, 21, 0.1);
+    box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.2);
 }
   
 .post__header {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .post__header > .MuiAvatar-colorDefault {
-    background-color: #70b5f9;
+    background-color: #d4d4d4;
     width: 45px;
     height: 45px;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid whitesmoke;
 }
   
 .post__header > .MuiAvatar-root {
     width: 45px;
     height: 45px;
-    border: 2px solid rgb(235, 235, 235);
+    border: 2px solid whitesmoke;
 }
 
 .post__info {
-    margin-left: 10px;
+    margin-left: 2px;
 }
   
 .post__info > p {
     font-size: 12px;
-    color: gray;
+    color: rgb(92, 92, 92);
 }
   
 .post__body {
@@ -40,7 +40,7 @@
 }
   
 .post__info > h2 {
-    font-size: 15px;
+    font-size: 19px;
 }
   
 .post__buttons {

@@ -11,7 +11,7 @@ function Post({ name, description, message, photoUrl }) {
   return (
     <div className='post'> 
         <div className='post__header'> 
-            <Avatar /> 
+            {/* <Avatar />  */}
             <div className='post__info'> 
                 <h2>{name}</h2>
                 <p>{description}</p> 
@@ -23,8 +23,6 @@ function Post({ name, description, message, photoUrl }) {
         <div className='post__buttons'> 
           <InputOption Icon={ThumbUpIcon} title="Like" color="gray" />
           <InputOption Icon={ChatOutlinedIcon} title="Comment" color="gray" />
-          <InputOption Icon={ShareOutlinedIcon} title="Share" color="gray" />
-          <InputOption Icon={SendOutlinedIcon} title="Send" color="gray" />
         </div> 
     </div> 
   ); 

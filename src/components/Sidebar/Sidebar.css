@@ -1,13 +1,17 @@
 .sidebar {
   position: sticky;
   top: 100px;
-  flex: 0.4;
+  flex: 0.3;
   border-radius: 10px;
   text-align: center;
   height: fit-content;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 3px 11px 1px rgba(0, 0, 0, 0.4);
 }
 
 .sidebar__avatar {
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
@@ -24,7 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid lightgray;
+  border: 1px solid whitesmoke;
   border-bottom: 0;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -41,7 +45,7 @@
 }
 
 .sidebar__top > .MuiAvatar-colorDefault {
-  background-color: #70b5f9;
+  /* background-color: ; */
   width: 70px;
   height: 70px;
   border: 2px solid rgb(255, 255, 255);
@@ -77,7 +81,7 @@
 
 .sidebar__statNumber {
   font-weight: bold;
-  color: #0a66c2 !important;
+  color: #b44339 !important;
 }
 
 .sidebar__bottom {
@@ -108,7 +112,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 13px;
-  color: #0a66c2;
+  color: #b44339;
 }
 
 .sidebar__recentItem:hover {

@@ -3,12 +3,12 @@
     top: 0;
     display: flex;
     justify-content: space-evenly;
-    border-bottom: 0.1px solid lightgrey;
+    border-bottom: 0.1px solid whitesmoke;
     padding-top: 10px;
     padding-bottom: 10px;
     width: 100%;
     z-index: 999;
-    background-color: rgb(43, 43, 43);
+    /* background-color: #b44339; */
 
 }
 .header__left {
@@ -27,7 +27,7 @@
     border-radius: 6px;
     height: 22px;
     color: rgb(255, 255, 255);
-    background-color: #b5b5b5;
+    background-color: #d2d2d2;
 }
 
 .header__search > input {
@@ -42,7 +42,7 @@
 }
 
 .header__right .MuiAvatar-colorDefault {
-    background-color: #70B5F9;
+    background-color: #b44339;
   }
 
 @media screen and (max-width: 750px) {
@@ -55,7 +55,7 @@
 
   .header__left > img {
     object-fit: contain;
-    height: 30px;
+    height: 50px;
     margin-right: 10px;
 }
 }
