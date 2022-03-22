@@ -58,8 +58,8 @@ export default function Login() {
   return (
     <div className="login">
       <img 
-        src="/assets/images/redbc-3.png"
-        alt="linkedin logo"
+        src="/assets/images/liga-logos_transparent.png"
+        alt="liga logo"
       />
       <form>
         {/* <input
