@@ -149,7 +149,15 @@ export default function Login() {
           Register
         </button>
       </form>}
-
+      <footer> 
+      <h4>
+        by{" "}
+        <a href="https://twitter.com/technoabsurdist">
+          {" "}
+          @technoabsurdist
+        </a>{" "}
+      </h4>
+      </footer> 
    </div>
   );
 }
