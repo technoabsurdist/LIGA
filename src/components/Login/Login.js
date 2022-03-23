@@ -84,21 +84,6 @@ export default function Login() {
         alt="liga logo"
       />
       {isSignInClicked && <form>
-        {/* <input
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          placeholder="Full name"
-          type="text"
-          autoComplete="new-password"
-        /> */}
-
-        {/* <input
-          placeholder="Profile picture URL (optional)"
-          type="text"
-          value={profilePic}
-          onChange={(e) => setProfilePic(e.target.value)}
-        />         
-  */}
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -154,6 +139,7 @@ export default function Login() {
             Register
           </button>
           </form>} 
+
         {/* Show buttons if botn not clicked */}
         {!isSignInClicked && !isRegisterClicked && <form>
         <button type="submit" onClick={onSubmitClickHandler}> 
