@@ -6,6 +6,8 @@ LIGA spurred from the need at UChicago to have a portal that directly connects 
 <br/>
 Establish a Handshake for every club on UChicago and beyond. What if we could facilitate this pipeline creation for every RSO on every campus? What if members of a club could register to a platform that compiles their information and creates an amazing recruitment profile, which they can afterwards send to recruiters and they can directly contact each member. Imagine the impact for both the recruiter and the recruited.
 
+<br /> 
+
 ### Progress
 
 1. [X] I used Linkedin-clone public project as skeleton to create the back-end of the platform. This allowed
