@@ -76,7 +76,7 @@ export default function Login() {
           value={profilePic}
           onChange={(e) => setProfilePic(e.target.value)}
         /> */}
-
+{/* 
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -91,12 +91,14 @@ export default function Login() {
           placeholder="Password"
           type="password"
         />
-
+      */ }
+        <button type="submit" onClick={loginToApp}> 
+          Sign In As Club Member
+        </button>
         <button type="submit" onClick={loginToApp}>
-          Sign In
+          Sign In As Recruiter 
         </button>
       </form>
-
       <p>
         Not a member? {""}
         <span className="login__register" onClick={register}>
@@ -104,6 +106,15 @@ export default function Login() {
           Register Now
         </span>
       </p>
-    </div>
+      <div id="my_footer"> 
+      <h4>
+        © 2022 LIGA by{" "}
+        <a href="https://www.linkedin.com/in/emi-andere/">
+          {" "}
+          Emilio Andere
+        </a>{" "}
+      </h4>
+      </div>
+   </div>
   );
 }
