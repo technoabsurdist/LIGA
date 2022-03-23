@@ -73,6 +73,12 @@ export default function Login() {
   }
   return (
     <div className="login">
+      {(isSignInClicked || isRegisterClicked) && <header> 
+        <form>
+          <button id="back" onClick={() => navigate('/home')}>🏠</button>
+        </form>
+      </header>}
+
       <img 
         src="/assets/images/liga-logos_transparent.png"
         alt="liga logo"
@@ -111,7 +117,6 @@ export default function Login() {
         <button type="submit" onClick={loginToApp}> 
           Sign In 
         </button>
-      <button id="back" onClick={() => navigate('/home')}>Back</button>
         </form>} 
 
         {isRegisterClicked && <form>
@@ -148,7 +153,6 @@ export default function Login() {
           <button type="submit" onClick={register}> 
             Register
           </button>
-        <button id="back" onClick={() => navigate('/home')}>Back</button>
           </form>} 
         {/* Show buttons if botn not clicked */}
         {!isSignInClicked && !isRegisterClicked && <form>
