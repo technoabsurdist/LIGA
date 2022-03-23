@@ -4,14 +4,22 @@ import { Link } from 'react-router-dom'
 import { login } from "../../features/userSlice";
 import { useDispatch } from "react-redux";
 import { auth } from "../../firebase";
+import "../Form/Form"; 
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [name, setName] = useState("");
-  // const [profilePic, setProfilePic] = useState("");
+  const [name, setName] = useState("");
+  const [profilePic, setProfilePic] = useState("");
   const dispatch = useDispatch();
+  // const [enteredUsername,setEnteredUsername] = useState('');
+  // const [enteredPassword,setEnteredPassword] = useState('');
+  // const [isTrue,setTrue] = useState(true);
+  const [isSignInClicked,setIsSignInClicked] = useState(false);
+  const [isRegisterClicked, setIsRegisterClicked] = useState(false);  
 
+  const navigate = useNavigate();
   const loginToApp = (e) => {
     e.preventDefault();
 
@@ -22,7 +30,7 @@ export default function Login() {
           login({
             email: userAuth.user.email,
             uid: userAuth.user.uid,
-            // displayName: userAuth.user.displayName,
+            displayName: userAuth.user.displayName,
             profileUrl: userAuth.user.photoURL,
           })
         );
@@ -31,24 +39,24 @@ export default function Login() {
   };
 
   const register = () => {
-    // if (!name) {
-    //   return alert("A full name is required to register.");
-    // }
+    if (!name) {
+      return alert("A full name is required to register.");
+    }
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((userAuth) => {
         userAuth.user
           .updateProfile({
-            // displayName: name,
-            // photoURL: profilePic,
+            displayName: name,
+            photoURL: profilePic,
           })
           .then(() => {
             dispatch(
               login({
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
-                // displayName: name,
-                // photoUrl: profilePic,
+                displayName: name,
+                photoUrl: profilePic,
               })
             );
           });
@@ -56,17 +64,24 @@ export default function Login() {
       .catch((error) => alert(error));
   };
 
+  const onSubmitClickHandler =()=>{
+    setIsSignInClicked(true);
+  }
+
+  const onRegisterClickHandler = () => {
+    setIsRegisterClicked(true); 
+  }
   return (
     <div className="login">
       <img 
         src="/assets/images/liga-logos_transparent.png"
         alt="liga logo"
       />
-      <form>
+      {isSignInClicked && <form>
         {/* <input
           value={name}
           onChange={(e) => setName(e.target.value)}
-          placeholder="Full name (required if registering)"
+          placeholder="Full name"
           type="text"
           autoComplete="new-password"
         /> */}
@@ -76,8 +91,8 @@ export default function Login() {
           type="text"
           value={profilePic}
           onChange={(e) => setProfilePic(e.target.value)}
-        /> */}
-{/* 
+        />         
+  */}
         <input
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -92,32 +107,59 @@ export default function Login() {
           placeholder="Password"
           type="password"
         />
-      */ }
+
         <button type="submit" onClick={loginToApp}> 
-          Sign In As Club Member
+          Sign In 
         </button>
-        <button type="submit" onClick={loginToApp}>
-          Sign In As Recruiter 
+      <button id="back" onClick={() => navigate('/home')}>Back</button>
+        </form>} 
+
+        {isRegisterClicked && <form>
+          <input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Full name"
+            type="text"
+            autoComplete="new-password"
+          /> 
+
+          <input
+            placeholder="Profile picture URL (optional)"
+            type="text"
+            value={profilePic}
+            onChange={(e) => setProfilePic(e.target.value)}
+          />         
+
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder="Email"
+            type="email"
+            autoComplete="new-password"
+          />
+
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            type="password"
+          />
+
+          <button type="submit" onClick={register}> 
+            Register
+          </button>
+        <button id="back" onClick={() => navigate('/home')}>Back</button>
+          </form>} 
+        {/* Show buttons if botn not clicked */}
+        {!isSignInClicked && !isRegisterClicked && <form>
+        <button type="submit" onClick={onSubmitClickHandler}> 
+          Sign In
         </button>
-      </form>
-      <p>
-        Not a member? {""}
-        <span className="login_ _register" onClick={register}>
-          {" "}
-          <li> 
-            {/* <Link to="/register">Register Now</Link> */}
-          </li> 
-        </span>
-      </p>
-      <div id="my_footer"> 
-      <h4>
-        © 2022 LIGA by{" "}
-        <a href="https://www.linkedin.com/in/emi-andere/">
-          {" "}
-          Emilio Andere
-        </a>{" "}
-      </h4>
-      </div>
+        <button type="submit" onClick={onRegisterClickHandler}>
+          Register
+        </button>
+      </form>}
+
    </div>
   );
 }
