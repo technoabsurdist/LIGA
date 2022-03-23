@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./Login.css";
+import { Link } from 'react-router-dom'
 import { login } from "../../features/userSlice";
 import { useDispatch } from "react-redux";
 import { auth } from "../../firebase";
@@ -101,9 +102,11 @@ export default function Login() {
       </form>
       <p>
         Not a member? {""}
-        <span className="login__register" onClick={register}>
+        <span className="login_ _register" onClick={register}>
           {" "}
-          Register Now
+          <li> 
+            {/* <Link to="/register">Register Now</Link> */}
+          </li> 
         </span>
       </p>
       <div id="my_footer"> 
