@@ -1,3 +1,21 @@
+## The Problem Being Tackled
+<br/>
+- LIGA spurred from the need at UChicago to have a portal that directly connects recruiters to specific RSOs (Recognized Student Organizations). There are certain exclusive organizations on campus that are known to have a direct pipeline to top companies in their respective sectors, but what about all the others that can't afford this luxury because of various reasons? 
+
+## The Solution Being Developed
+<br/>
+- Establish a Handshake for every club on UChicago and beyond. What if we could facilitate this pipeline creation for every RSO on every campus? What if members of a club could register to a platform that compiles their information and creates an amazing recruitment profile, which they can afterwards send to recruiters and they can directly contact each member. Imagine the impact for both the recruiter and the recruited.
+
+<br />
+
+### Progress
+
+<br />
+
+1. [X] I used Linkedin-clone public project as skeleton to create the back-end of the platform. This allowed
+me to learn by doing. This also let me do some modifications to model to my project's needs. 
+
+2. [X] Initial login page ready. I completed the initial login page where you can sign in and also register. Now I need to add the different information I need from each user to sign up with a club or as a recruiter. 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
