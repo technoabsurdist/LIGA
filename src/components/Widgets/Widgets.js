@@ -21,7 +21,7 @@ function Widgets() {
     return (
       <div className="widgets">
         <div className="widgets__header">
-          <h2>UCBlockchain News</h2>
+          <h2>Your Dashboard</h2>
           <InfoOutlinedIcon />
         </div>
         {newsArticle(

@@ -10,7 +10,7 @@ export default function Sidebar() {
 
     const recentItem = (topic) => (
         <div className="sidebar__recentItem">
-            <span className="sidebar__hash">🧱</span>
+            <span className="sidebar__hash">🏢</span>
             <p>{topic}</p>
         </div>
     ) 
@@ -26,7 +26,7 @@ export default function Sidebar() {
             </div>
             
             <div className="sidebar__bottom">
-                <h4>Week's Outstanding DAO Builders</h4>
+                <h4>Trending RSOs</h4>
                 {recentItem('Simon')}
                 {recentItem('Tim')}
                 {recentItem('Elliot')}

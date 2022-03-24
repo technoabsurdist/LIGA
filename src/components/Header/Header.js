@@ -10,12 +10,12 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import { useDispatch} from 'react-redux';
 import { logout } from '../../features/userSlice';
 import { auth } from '../../firebase';
-
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
 
     const dispatch = useDispatch()
-
+    const navigate = useNavigate();
     const logoutOfApp = ()=>{
         dispatch(logout())
         auth.signOut();

@@ -1,7 +1,9 @@
 .header {
+    /* background-color: black; */
+    background-image: linear-gradient(to top, #c4c5c7 0%, #dcdddf 52%, #ebebeb 100%);
     position: sticky;
     top: 0;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     display: flex;
     justify-content: space-evenly;
     /* padding-top: 0px; */
@@ -34,6 +36,9 @@
     width: 280px; 
     height: 20px;
     color: rgb(255, 255, 255);
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten; 
     /* background-image: linear-gradi  ent(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%); */
     /* background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%); */
     box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
@@ -46,7 +51,9 @@
     right: 30px; 
 }
 
-
+.header__search:focus {
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);   
+}
 .header__search > input {
     width: 250px;
     outline: none;
@@ -73,10 +80,9 @@
     text-align: center;
     font-weight: bold;
     font-size: 15px;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    /* background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%); */
-    /* background-image: linear-gradient(60deg, #29323c 0%, #485563 100%); */
-    /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten; 
     border-radius: 100px;
     border: 0.5px;
     outline: none !important;
@@ -102,9 +108,9 @@
     right: -100px; 
     text-align: center;
     font-size: 15px;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    /* background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%); */
-    /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten; 
     border-radius: 100px;
     border: 0.5px;
     outline: none !important;
@@ -128,9 +134,11 @@
     right: -500px; 
     text-align: center;
     font-size: 14px;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
     /* background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%); */
     /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten; 
     border-radius: 100px;
     border: 0.5px;
     outline: none !important;
@@ -138,21 +146,9 @@
 
 button:hover {
     cursor: pointer;
-    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-    background-blend-mode: multiply;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);  
 }
 
-button:hover {
-    cursor: pointer;
-    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-    background-blend-mode: multiply;
-}
-
-.headerButtonJobs:hover {
-    cursor: pointer;
-    background: linear-gradient(to bottom, #323232 0%, #3F3F3F 40%, #1C1C1C 150%), linear-gradient(to top, rgba(255,255,255,0.40) 0%, rgba(0,0,0,0.25) 200%);
-    background-blend-mode: multiply;
-}
 
 .header__right {
     display: flex;
