@@ -71,6 +71,7 @@ export default function Login() {
   const onRegisterClickHandler = () => {
     setIsRegisterClicked(true); 
   }
+
   return (
     <div className="login">
       {(isSignInClicked || isRegisterClicked) && <header> 
@@ -135,7 +136,7 @@ export default function Login() {
             type="password"
           />
 
-          <button type="submit" onClick={register}> 
+          <button className="login__register" onClick={register}> 
             Register
           </button>
           </form>} 

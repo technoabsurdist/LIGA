@@ -30,21 +30,18 @@ function Header() {
                     alt="liga logo"
                 />
 
-                {/* <div className="header__search"> */}
-                    {/* <SearchIcon style={{ color: 'black' }}/> */}
-                    {/* <input type="text"  placeholder="Search"/> */}
-                {/* </div> */}
+                <div className="header__search">
+                    <SearchIcon style={{ color: 'black' }}/>
+                    <input type="text"  placeholder=""/>
+                </div>
             </div>
             
             <div className="header__right">
-                {/* <HeaderOption Icon={HomeIcon} title ="Home"/> */}
-                {/* <HeaderOption Icon={SupervisorAccountIcon} title ="My Network"/> */}
-                {/* <HeaderOption Icon={BusinessCenterIcon} title ="Jobs"/> */}
-                {/* <HeaderOption Icon={ChatIcon} title ="Messaging"/> */}
-                {/* <HeaderOption Icon={NotificationsIcon} title ="Notifications"/> */}
-                <HeaderOption avatar= {true} title ="Log Out" onClick ={logoutOfApp}/>
-
-
+                <form>
+                    <button className="headerButtonHome" onClick={() => navigate('/home')}>HOME</button>
+                    <button className="headerButtonNetwork" onClick={() => {}}>PROFILE</button>
+                    <button className="headerButtonJobs" onClick={() => {}}>‎‍JOBS</button>
+                </form>
             </div>
         </div>
     );
