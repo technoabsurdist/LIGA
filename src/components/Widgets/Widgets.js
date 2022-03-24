@@ -8,7 +8,7 @@ function Widgets() {
     const newsArticle = (heading, subtitle) => (
       <div className="widgets__article">
         <div className="widgets__articleLeft">
-          <FiberManualRecordIcon />
+          {/* <FiberManualRecordIcon /> */}
         </div>
   
         <div className="widgets__articleRight">
@@ -22,7 +22,6 @@ function Widgets() {
       <div className="widgets">
         <div className="widgets__header">
           <h2>Your Dashboard</h2>
-          <InfoOutlinedIcon />
         </div>
         {newsArticle(
           "Chicago DAO launches as millions await their official launch.",

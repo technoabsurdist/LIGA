@@ -25,22 +25,13 @@ export default function Sidebar() {
             </div>
             
             <div className="sidebar__bottom">
-                <h4>Trending RSOs</h4>
-                {recentItem('Simon')}
-                {recentItem('Tim')}
-                {recentItem('Elliot')}
-                {recentItem('Lex')}
-                {recentItem('Frank')}
-                {recentItem('Trump')}
-                {recentItem('Steve')}
-                {recentItem('Cristiano')}
-                {recentItem('Messi')}
-                {recentItem('Pele')}
-                {recentItem('Sergei')}
-                {recentItem('Zuckerberg')}
-                {recentItem('Potter')}
-                {/* {recentItem('Potter')} */}
-                {/* {recentItem('Potter')} */}
+                <h4>Profile Information</h4>
+                {recentItem('Resume: ')}
+                {recentItem('Interests: ')}
+                {recentItem('LinkedIn: ')}
+                {recentItem('Twitter: ')}
+                {recentItem('Github: ')}
+                {recentItem('Major(s)/Minor: ')}
             </div>
         </div>
     )

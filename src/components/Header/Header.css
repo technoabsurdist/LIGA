@@ -11,7 +11,7 @@
     width: 100%;
     z-index: 999;
     height: 33px; 
-
+    border: 2px solid rgb(77, 77, 77); 
 }
 .header__left {
     display: flex;
