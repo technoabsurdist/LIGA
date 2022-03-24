@@ -20,12 +20,13 @@
 .header__left > img {
     padding: 10px; 
     display: flex; 
+    position: absolute;
     align-items: center; 
     height: 150px;
     width: 1080px; /* so it is center */ 
     position: absolute;
     top: -50px; 
-    left: -480px; 
+    left: 120px; 
 }
 
 
@@ -49,6 +50,7 @@
     top: 15px; 
     /* left: 150px;  */
     right: 30px; 
+    border-radius: 10px;
 }
 
 .header__search:focus {
@@ -83,7 +85,7 @@
     background: #C9CCD3;
     background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
     background-blend-mode: lighten; 
-    border-radius: 100px;
+    border-radius: 10px;
     border: 0.5px;
     outline: none !important;
 }
@@ -111,7 +113,7 @@
     background: #C9CCD3;
     background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
     background-blend-mode: lighten; 
-    border-radius: 100px;
+    border-radius: 10px;
     border: 0.5px;
     outline: none !important;
 }
@@ -134,12 +136,10 @@
     right: -500px; 
     text-align: center;
     font-size: 14px;
-    /* background-image: linear-gradient(-20deg, #616161 0%, #9bc5c3 100%); */
-    /* background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
     background: #C9CCD3;
     background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
     background-blend-mode: lighten; 
-    border-radius: 100px;
+    border-radius: 10px;
     border: 0.5px;
     outline: none !important;
 }
@@ -149,20 +149,41 @@ button:hover {
     background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);  
 }
 
+#log-out {
+    color: rgb(41, 41, 41);
+    /* background-image: linear-gradi  ent(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%); */
+    box-shadow: 2px 2px 2px 1px rgb(58, 58, 58);
+    /* border-radius: 50px; */
+    border: 1px;
+    position: absolute; 
+    width: 60px; 
+    top: 0px; 
+    left: 0px; 
+    text-align: center;
+    background: #C9CCD3;
+    background-image: linear-gradient(-180deg, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%);
+    background-blend-mode: lighten; 
+    border-radius: 5px;
+    border: 0.5px;
+    outline: none !important;
+}
+
+#log-out:hover {
+    cursor: pointer;
+    background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);  
+}
+
 
 .header__right {
     display: flex;
-    color: black; 
     position: absolute;
-    top: 15px; 
-    left: 300px; 
+    top: 10px; 
+    left: 10px; 
+    border-radius: 0;
 }
 
 .header__right .MuiAvatar-colorDefault {
-    position: absolute;
-    top: 10px; 
-    right: 20px; 
-    background-color: #555555;
+    background-color: #525252;
   }
 
 @media screen and (max-width: 750px) {

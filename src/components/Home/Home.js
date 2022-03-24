@@ -13,6 +13,11 @@ function Home() {
     const dispatch = useDispatch();
     const user = useSelector(selectUser); 
 
+    const logoutOfApp = ()=>{
+        dispatch(logout())
+        auth.signOut();
+
+    };
     // Authenticate user with back-end
     useEffect(() => {
     auth.onAuthStateChanged((userAuth) => {

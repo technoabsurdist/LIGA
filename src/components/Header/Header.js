@@ -29,19 +29,10 @@ function Header() {
                     src="/assets/images/liga-logos_black.png"
                     alt="liga logo"
                 />
-
-                <div className="header__search">
-                    <SearchIcon style={{ color: 'black' }}/>
-                    <input type="text"  placeholder=""/>
-                </div>
             </div>
             
             <div className="header__right">
-                <form>
-                    <button className="headerButtonHome" onClick={() => navigate('/home')}>HOME</button>
-                    <button className="headerButtonNetwork" onClick={() => {}}>PROFILE</button>
-                    <button className="headerButtonJobs" onClick={() => {}}>‎‍JOBS</button>
-                </form>
+                <button id="log-out" onClick ={logoutOfApp}>Log Out</button>
             </div>
         </div>
     );

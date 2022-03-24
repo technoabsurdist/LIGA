@@ -18,7 +18,6 @@ export default function Sidebar() {
     return (
         <div className="sidebar">
             <div className="sidebar__top">
-                <img src="https://media-exp1.licdn.com/dms/image/C5616AQGpDv5aibcW1w/profile-displaybackgroundimage-shrink_350_1400/0/1552852295802?e=1616025600&v=beta&t=N5r1gZG89SHBYq__9Zcsnk1qVQuyE11Em-ahSpWz78o" alt="background" />
                 <Avatar src={user.photoUrl} className="sidebar__avatar"> 
                 {user.email[0].toUpperCase()}</Avatar>
                 <h2>{user.displayName}</h2>
@@ -40,6 +39,8 @@ export default function Sidebar() {
                 {recentItem('Sergei')}
                 {recentItem('Zuckerberg')}
                 {recentItem('Potter')}
+                {/* {recentItem('Potter')} */}
+                {/* {recentItem('Potter')} */}
             </div>
         </div>
     )

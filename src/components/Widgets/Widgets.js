@@ -56,6 +56,22 @@ function Widgets() {
          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
          "read more"
         )}
+        {newsArticle(
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+         "read more"
+        )}
+        {newsArticle(
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+         "read more"
+        )}
+        {newsArticle(
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+         "read more"
+        )}
+        {newsArticle(
+         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do",
+         "read more"
+        )}
         </div>
     );
 }
