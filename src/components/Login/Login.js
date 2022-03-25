@@ -10,11 +10,6 @@ import { useNavigate } from 'react-router-dom';
 export default function Login() {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [profilePic, setProfilePic] = useState("");
-  const [linkedURL, setLinkedinURL] = useState(""); 
-  const [interests, setInterests] = useState(""); 
-  const [twitterURL, setTwitterURL] = useState(""); 
-  const [githubURL, setGithubURL] = useState(""); 
   const [password, setPassword] = useState("");
   const [isSignInClicked,setIsSignInClicked] = useState(false);
   const [isRegisterClicked, setIsRegisterClicked] = useState(false);  
@@ -32,46 +27,13 @@ export default function Login() {
             email: userAuth.user.email,
             uid: userAuth.user.uid,
             displayName: userAuth.user.displayName,
-            profileUrl: userAuth.user.photoURL,
           })
         );
       })
       .catch((error) => alert(error));
   };
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    var self = this;
-    // On submit of the form, send a POST request with the data to the server.
-    fetch('/users', { 
-        method: 'POST',
-        data: {
-          name: refs.name,
-          email: refs.email,
-          interests: refs.interests,
-          linkedin: refs.linkedin,
-          twitter: refs.twitter,
-          github: regs.github, 
-          password: refs.password
-        }
-      })
-      .then(function(response) {
-        return response.json()
-      }).then(function(body) {
-        console.log(body);
-      });
-  }
-  //     username: name,
-  //     email: email,
-  //     profile_picture : imageUrl,
-  //     linkedInURL: linkedInURL, 
-  //     twitterURL: twitterURL, 
-  //     githubURL: githubURL, 
-  //     password: password,
-  //   });
-  // }
-
-  const register = () => {
+   const register = () => {
     if (!name) {
       return alert("A full name is required to register.");
     }
@@ -81,7 +43,6 @@ export default function Login() {
         userAuth.user
           .updateProfile({
             displayName: name,
-            photoURL: profilePic,
           })
           .then(() => {
             dispatch(
@@ -89,7 +50,6 @@ export default function Login() {
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
                 displayName: name,
-                photoUrl: profilePic,
               })
             );
           });
@@ -145,7 +105,6 @@ export default function Login() {
             placeholder="Full name"
             type="text"
             autoComplete="new-password"
-            ref="name"
           /> 
 
           <input
@@ -153,48 +112,13 @@ export default function Login() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
             type="email"
-            ref="email"
           />
 
-          <input
-            placeholder="Interests (e.g., Web Development, Business)"
-            type="text"
-            value={profilePic}
-            onChange={(e) => setInterests(e.target.value)}
-            ref="interests"
-          /> 
-
-          <input
-            placeholder="LinkedIn URL"
-            type="text"
-            required
-            value={profilePic}
-            onChange={(e) => setLinkedinURL(e.target.value)}
-            ref="linkedin"
-          />   
-
-          <input
-            placeholder="Twitter URL (Optional)"
-            type="text"
-            value={profilePic}
-            onChange={(e) => setTwitterURL(e.target.value)}
-            ref="twitter"
-          />   
- 
-          <input
-            placeholder="Github URL (Optional)"
-            type="text"
-            value={profilePic}
-            onChange={(e) => setGithubURL(e.target.value)}
-            ref="github"
-          />   
- 
-          <input
+         <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             type="password"
-            ref="password"
           />
           
           <button className="login__register" onClick={register}> 
