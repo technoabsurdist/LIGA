@@ -33,9 +33,13 @@ export default function Login() {
           login({
             email: userAuth.user.email,
             uid: userAuth.user.uid,
-            // displayName: userAuth.user.displayName,
-            // displayLinkedinURL: userAuth.user.displayLinkedinURL,
-            // displayTwitterURL: userAuth.user.displayTwitterURL
+            displayName: userAuth.user.displayName,
+            displayLinkedinURL: userAuth.user.displayLinkedinURL,
+            displayTwitterURL: userAuth.user.displayTwitterURL,
+            displayGhURL: userAuth.user.displayGhURL,
+            displayRSOList: userAuth.user.displayRSOList,
+            displayMajors: userAuth.user.displayMajors,
+            displayInterests: userAuth.user.displayInterests
           })
         );
       })
