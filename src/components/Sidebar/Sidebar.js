@@ -29,7 +29,7 @@ export default function Sidebar() {
                 {/* TODO: Add resume information */}
                 {user.displayResume && recentItem('Resume: ')}
                 {user.displayRSOList && recentItem('RSOs: ' + user.displayRSOList)}
-                {user.displayMajors && recentItem('Major(s)/Minor(s):  + user.displayMajors')}
+                {user.displayMajors && recentItem('Major(s)/Minor(s):'  + user.displayMajors)}
                 {user.displayInterests && recentItem('Interests: ') + user.displayInterests}
                 {user.displayLinkedinURL && recentItem('Linkedin: ' + user.displayLinkedinURL)}
                 {user.displayTwitterURL && recentItem('Twitter: ' + user.displayTwitterURL)} 
