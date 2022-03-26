@@ -13,12 +13,19 @@ export default function Login() {
   const [password, setPassword] = useState("");
   const [isSignInClicked,setIsSignInClicked] = useState(false);
   const [isRegisterClicked, setIsRegisterClicked] = useState(false);  
+  const [linkedinURL, setLinkedinURL] = useState(""); 
+  const [twitterURL, setTwitterURL] = useState(""); 
+  const [ghURL, setGhURL] = useState(""); 
+  const [rsoList, setRsoList] = useState([]);
+  const [major, setMajor] = useState("");
+  const [interests, setInterests] = useState("");
 
   const dispatch = useDispatch();
     const navigate = useNavigate();
 
   const loginToApp = (e) => {
     e.preventDefault();
+
     auth
       .signInWithEmailAndPassword(email, password)
       .then((userAuth) => {
@@ -26,14 +33,16 @@ export default function Login() {
           login({
             email: userAuth.user.email,
             uid: userAuth.user.uid,
-            displayName: userAuth.user.displayName,
+            // displayName: userAuth.user.displayName,
+            // displayLinkedinURL: userAuth.user.displayLinkedinURL,
+            // displayTwitterURL: userAuth.user.displayTwitterURL
           })
         );
       })
       .catch((error) => alert(error));
   };
 
-   const register = () => {
+  const register = () => {
     if (!name) {
       return alert("A full name is required to register.");
     }
@@ -43,6 +52,13 @@ export default function Login() {
         userAuth.user
           .updateProfile({
             displayName: name,
+            displayLinkedinURL: linkedinURL,
+            displayTwitterURL: twitterURL,
+            displayGhURL: ghURL,
+            displayRSOList: rsoList,
+            displayMajors: major,
+            displayInterests: interests
+            
           })
           .then(() => {
             dispatch(
@@ -50,6 +66,12 @@ export default function Login() {
                 email: userAuth.user.email,
                 uid: userAuth.user.uid,
                 displayName: name,
+                displayLinkedinURL: linkedinURL,
+                displayTwitterURL: twitterURL,
+                displayGhURL: ghURL,
+                displayRSOList: rsoList,
+                displayMajors: major,
+                displayInterests: interests
               })
             );
           });
@@ -92,11 +114,11 @@ export default function Login() {
           placeholder="Password"
           type="password"
         />
-
-        <button type="submit" onClick={loginToApp}> 
+      
+        <span className="login__register" onClick={loginToApp}>
           Sign In 
-        </button>
-        </form>} 
+        </span>
+        </form>}
 
         {isRegisterClicked && <form>
           <input
@@ -114,20 +136,77 @@ export default function Login() {
             type="email"
           />
 
-         <input
+          <input
+            value={linkedinURL}
+            onChange={(e) => setLinkedinURL(e.target.value)}
+            placeholder="Linkedin URL"
+            type="linkedin"
+          />
+
+          <input
+            value={twitterURL}
+            onChange={(e) => setTwitterURL(e.target.value)}
+            placeholder="Twitter URL (Optional)"
+            type="twitter"
+          />
+
+          <input
+            value={ghURL}
+            onChange={(e) => setGhURL(e.target.value)}
+            placeholder="Github URL (Optional)"
+            type="github"
+          />
+
+          <input
+            value={major}
+            onChange={(e) => setMajor(e.target.value)}
+            placeholder=" Major(s)/Minor(s) (Optional)"
+            type="major"
+          />
+
+          <input
+            value={interests}
+            onChange={(e) => setInterests(e.target.value)}
+            placeholder="Interests (Optional)"
+            type="interests"
+          />
+
+          <select name="rsos" className="rsos" multiple>
+            <option value="blockchain" onClick={(e) => setRsoList(oldArray => [...oldArray, e.target.value])}
+              className="item-rsos">Chicago Blockchain</option>
+
+            <option value="bluechips" onClick={(e) => setRsoList(oldArray => [...oldArray, e.target.value])}
+              className="item-rsos">Blue Chips</option>
+
+            <option value="eckhart" onClick={(e) => setRsoList(oldArray => [...oldArray, e.target.value])}
+              className="item-rsos">Eckhart</option>
+
+            <option value="maroon" onClick={(e) => setRsoList(oldArray => [...oldArray, e.target.value])}
+              className="item-rsos">Maroon Capital</option>
+
+            <option value="paragon" onClick={(e) => setRsoList(oldArray => [...oldArray, e.target.value])}
+              className="item-rsos">Paragon National Group</option>
+
+            <option value="pareto" onClick={(e) => setRsoList(oldArray => [...oldArray, e.target.value])} 
+              className="item-rsos">Pareto Solutions</option>
+
+            <option value="pareto" onClick={(e) => setRsoList(oldArray => [...oldArray, e.target.value])} 
+              className="item-rsos">AKPsi</option>
+
+          </select>
+
+          <input
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
             type="password"
           />
           
-          <button className="login__register" onClick={register}> 
+          <span className="login__register" onClick={register}>
             Register
-          </button>
-
+          </span>
           </form>} 
 
-        {/* Show buttons if botn not clicked */}
         {!isSignInClicked && !isRegisterClicked && <form>
         <button type="submit" onClick={onSubmitClickHandler}> 
           Sign In
@@ -136,15 +215,6 @@ export default function Login() {
           Register
         </button>
       </form>}
-      <footer> 
-      <h4 id="my_footer">
-        {/* by{" "} */}
-        {/* <a href="https://twitter.com/technoabsurdist"> */}
-          {/* {" "} */}
-          {/* @technoabsurdist */}
-        {/* </a>{" "} */}
-      </h4>
-      </footer> 
    </div>
   );
 }
