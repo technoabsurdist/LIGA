@@ -39,7 +39,7 @@ export default function Login() {
             displayGhURL: userAuth.user.displayGhURL,
             displayRSOList: userAuth.user.displayRSOList,
             displayMajors: userAuth.user.displayMajors,
-            displayInterests: userAuth.user.displayInterests
+            displayInterests: userAuth.user.displayInterests,
           })
         );
       })
@@ -62,7 +62,6 @@ export default function Login() {
             displayRSOList: rsoList,
             displayMajors: major,
             displayInterests: interests
-            
           })
           .then(() => {
             dispatch(
@@ -144,35 +143,35 @@ export default function Login() {
             value={linkedinURL}
             onChange={(e) => setLinkedinURL(e.target.value)}
             placeholder="Linkedin URL"
-            type="linkedin"
+            type="text"
           />
 
           <input
             value={twitterURL}
             onChange={(e) => setTwitterURL(e.target.value)}
             placeholder="Twitter URL (Optional)"
-            type="twitter"
+            type="text"
           />
 
           <input
             value={ghURL}
             onChange={(e) => setGhURL(e.target.value)}
             placeholder="Github URL (Optional)"
-            type="github"
+            type="text"
           />
 
           <input
             value={major}
             onChange={(e) => setMajor(e.target.value)}
             placeholder=" Major(s)/Minor(s) (Optional)"
-            type="major"
+            type="text"
           />
 
           <input
             value={interests}
             onChange={(e) => setInterests(e.target.value)}
             placeholder="Interests (Optional)"
-            type="interests"
+            type="text"
           />
 
           <select name="rsos" className="rsos" multiple>

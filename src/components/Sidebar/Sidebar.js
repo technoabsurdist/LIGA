@@ -27,9 +27,9 @@ export default function Sidebar() {
             <div className="sidebar__bottom">
                 <h4>Profile Information</h4>
                 {/* TODO: Add resume information */}
-                {user.displayResume && recentItem('Resume: ')}
-                {user.displayRSOList && recentItem('RSOs: ' + user.displayRSOList)}
-                {user.displayMajors && recentItem('Major(s)/Minor(s): '  + user.displayMajors)}
+                {/* {user.displayResume && recentItem('Resume: ')} */}
+                {recentItem('RSOs: ' + user.displayRSOList)}
+                {recentItem('Major(s)/Minor(s): ' + user.displayMajors)}
                 {user.displayInterests && recentItem('Interests: ' + user.displayInterests)}
                 {user.displayLinkedinURL && recentItem('Linkedin: ' + user.displayLinkedinURL)}
                 {user.displayTwitterURL && recentItem('Twitter: ' + user.displayTwitterURL)} 
